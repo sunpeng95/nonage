@@ -38,3 +38,10 @@ a{
     color: black;
     text-decoration: none;
 }
+
+#water{
+    margin-top: -40%;
+    margin-left: 20%;
+    border-collapse: collapse;
+    border: black;
+}
