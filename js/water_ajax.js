@@ -15,11 +15,6 @@
 
 
 
-// 0  1~20   0    22~57  10   60~79   0.16   84~119   20   122~
-
-
-
-// setInterval(function(){
 //     var a = $(".value").text();
 //     a = a.replace(/[\r\n]/g,"");
 //     a = a.replace(/^\s+|\s+$/g,"");
@@ -37,9 +32,10 @@
 //         };
 //     };
 //     console.log(d);
-// },1000*5);
+//   会在储存完前面的需要的数据之后把类似于空格之类的东西全都以uderfined的形式每两个一个数组，每个数组存入大数组
+//   例如：[ [0,0],[10,0.16],...,[underfined,underfined],[underfined,underfined],...,[underfined,underfined] ]
 
-// setInterval(function(){
+
 //     var a = $(".value").text();
 //     a = a.replace(/[\r\n]/g,"");
 //     a = a.replace(/^\s+|\s+$/g,"");
@@ -48,7 +44,7 @@
 //     var group = [];
 //     var true_water = [];
 //     for (var i = 0; i < a.length; i++){
-//         if (cline[i] == "0") {
+//         if (cline[i] == "0") {     这里需要注意的是 0 如果不加引号那么就涉及到数据类型转换之后获得的 0 也会被判断为true 比如空格，在这里也会被当作 0 处理
 //             group.push(0)
 //         }else if (parseInt(clean[i])){
 //             group.push(parseInt(clean[i]));
@@ -63,7 +59,8 @@
 //                 group = [];
 //             };
 //     };
-// },1000*5);
+
+
 setInterval(function(){
     var a = $(".value").text();
     a = a.replace(/[\r\n]/g,"");
@@ -75,8 +72,10 @@ setInterval(function(){
         if (clean[i] == "0") {
             group.push(0)
         }else if (parseInt(clean[i])){
+            console.log(parseInt(clean[i]));
             group.push(parseInt(clean[i]));
         }else if (parseFloat(clean[i])) {
+            console.log(parseFloat(clean[i]));
             var number = parseFloat(clean[i])*100;
             group.push(number);
         }else{
@@ -87,6 +86,7 @@ setInterval(function(){
                 group = [];
             };
     };
+    console.log(true_water);
     $(function () {
         $('#line').highcharts({
             chart: {
