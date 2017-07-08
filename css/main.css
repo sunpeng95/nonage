@@ -25,12 +25,23 @@ ul{
     color: black;
     list-style: none;
     border: solid 2px #D2691E;
-    width: 100px;
+    width: 120px;
     height: 45px;
     float: center;
     line-height: 45px;
     margin: 30px 0 15px 100px;
     text-align: center;
+}
+
+.father{
+    margin-left: 20px;
+}
+.son{
+    margin-top: -80px;
+    margin-left: 50px;
+}
+.son>li{
+    border-color: rgb(255,164,115);
 }
 
 a{
