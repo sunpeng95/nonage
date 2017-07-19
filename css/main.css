@@ -56,3 +56,7 @@ a{
     border-collapse: collapse;
     border: black;
 }
+
+.action{
+    display: none;
+}

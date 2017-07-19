@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>站点简介</title>
     <link rel="stylesheet" href="../css/main.css">
-    <script type="text/javascript" href="../js/"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" href="../js/introduction.js"></script>
 </head>
 <body>
     <div>
@@ -15,9 +16,9 @@
         <ul>
             <li class='left-border father'><a href="homepage.html">站点简介(返回)</a></li>
                 <ul class="son">
-                    <li class='left-border' onclick="change_css_display">设备分布与运行</li>
-                    <li class='left-border' onclick="change_css_display">历史数据</li>
-                    <li class='left-border' onclick="change_css_display">站点图册</li>
+                    <li class='left-border' id="equipment">设备分布与运行</li>
+                    <li class='left-border' id="history">历史数据</li>
+                    <li class='left-border' id="picture">站点图册</li>
                 </ul>
         </ul>
     </div>
